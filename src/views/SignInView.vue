@@ -1,14 +1,12 @@
 <template>
   <div class="SignUpView">
     <h2>SignUp Page</h2>
-    <div class="container" style="background-color: #f1f1f1">
-      <button type="button" class="Home" href="index.html">Home</button>
-    </div>
+    
   </div>
 
   <div class="imgcontainer">
     <img
-      src="C:\Users\Net05\Desktop\Green Valley\GREEN_VALLEY-FOOD\Green Food Valley\assets\img\logo.jpg"
+      src="../assets/img/logo.jpg"
       alt="Avatar"
       class="avatar"
     />
@@ -26,17 +24,13 @@
     <label>
       <input type="checkbox" checked="checked" name="remember" /> lembrar
       usuario
+      <span class="psw">Esqueceu a <a href="#">password?</a></span>
     </label>
   
+  <div class="container" style="background-color:#f1f1f1">
+   
+    
   </div>
-
-  <div class="container" style="background-color: #f1f1f1">
-    <button type="button" class="login">Login</button>
-
-    <span class="psw">Esqueceu a <a href="#">password?</a></span>
-
-  </div>
-  <div> 
 
 <p>Ps: O "script" foi //comentado por razões desconhecidas que impossibilitavam o site de correr</p>
 
