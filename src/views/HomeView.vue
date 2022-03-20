@@ -1,18 +1,11 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Comida saudável<br>à distancia de um click</h1>
+      <h2>Entregamos em sua casa os alimentos que mais gosta</h2>
+      <a href="cabazes.html" class="btn-get-started">Escolhe o cabaz</a>
+    </div>
+  </section><!-- End Hero -->
+<footer> Green Food 2022 </footer>
 </template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>
