@@ -11,7 +11,7 @@
               <img src="../assets/img/course-1.jpg" class="img-fluid" alt="..." width="300" height="auto">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>2 pessoas</h4>
+                  
                   <p class="price">€69</p>
                 </div>
 
@@ -19,9 +19,7 @@
                 <p>O cabaz pensado no casal moderno que tem tudo o que precisa para cuidar da sua alimentação e saúde.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
+                  
                   </div>
                 </div>
               </div>
@@ -33,7 +31,7 @@
               <img src="../assets/img/course-2.jpg" class="img-fluid" alt="..."  width="300" height="auto" >
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>4 pessoas</h4>
+                
                   <p class="price">€129</p>
                 </div>
 
@@ -41,9 +39,7 @@
                 <p>O cabaz pensado na alimentação familizar com estilo de vida saudável.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
+                    
                   </div>
                 </div>
               </div>
@@ -55,7 +51,7 @@
               <img src="../assets/img/course-3.jpg" class="img-fluid" alt="..."  width="300" height="auto" >
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>1/2 pessoas</h4>
+                  
                   <p class="price">€45</p>
                 </div>
 
@@ -63,9 +59,7 @@
                 <p>Cabaz para uma ocasiao especial que contem o essencial para uma alimentação saudavel.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">                  
                   <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
+                    
                   </div>
                 </div>
               </div>
@@ -76,5 +70,5 @@
 
       </div>
     </section><!-- End Courses Section -->
-    <footer> Green Food 2022 </footer>
+   
 </template>

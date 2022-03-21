@@ -1,69 +1,119 @@
 <template>
-  <div class="SignUp">
-    <h2>SignUp Page</h2>
+  <div class="LOGIN">
+  <h2>Login Page</h2>
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="index.html" class="get-started-btn" style="color:#000000">HOME </a>
+      
+    
   </div>
-
-  <div class="logo">
-    <img
-      src="../assets/img/logo.jpg"
-      alt="Avatar"
-      class="avatar"
-    />
+</div>
+  <div class="imgcontainer">
+    <img src="~@/assets/img/logo.jpg" alt="Avatar" class="avatar">
   </div>
-
-  <div class="Register">
-    <p><input type="text" placeholder="Email" v-model="email"></p>
-    <br />
-    <p><input type="password" placeholder="Password" v-model="password"></p>
-    <p><button @click="register"> Sign Up </button></p>
-    <p><button @click="signInWithGoogle"> Sign In With Google </button></p>
-  </div>
-
+<div class = "box">
+    <form action="/action_page.php" method="post">
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+<p></p>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button @click="register" class="btn btn-outline-success">SignUp</button>
     <label>
-      <input type="checkbox" checked="checked" name="remember" /> lembrar
-      usuario
-      <span class="psw">Esqueceu a <a href="#">password?</a></span>
+      <input type="checkbox" checked="checked" name="remember"> lembrar usuario
     </label>
-  <div class="container" style="background-color:#f1f1f1">   
+
+  <div class="container">
+    <p>Já tem conta?</p>
+    <button type="button" class="btn btn-outline-success" >LogIn  </button>
+    <p></p>
+    <span class="psw">Esqueceu a <a href="#">password?</a></span>
   </div>
-<footer> Green Food 2022 </footer>
+</form>
+  
+</div>
+
 </template>
 
-<style>
+
+<script>
+/* eslint-disable */
+// import { ref } from "vue";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import firebase from "firebase";
+// import { useRouter } from "vue-router";
+// const email = ref("");
+// const password = ref("");
+// const errMsg = ref();
+// const router = useRouter();
+
+// const register = () => {
+//   firebase
+//     .auth()
+//     .signInWithEmailAndPassword(email.value, password.value)
+//     .then((data) => {
+//       console.log("Bem vindo");
+//       router.push("/");
+//     })
+
+//     .catch((error) => {
+//       console.log(error.code);
+//       switch (error.code) {
+//         case "auth/invalid-email":
+//           errMsg.value = "Email inválido";
+//           break;
+//         case "auth/user-not-found":
+//           errMsg.value = "Não existe conta som este email";
+//           break;
+//         case "auth/wrong-password":
+//           errMsg.value = "Password incorreta";
+//           break;
+//         default:
+//           errMsg.value = "Email ou Password incorreta";
+//           break;
+//       }
+//     });
+// };
+
+
+</script>
+<style scoped>
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-form {
-  border: 3px solid #f1f1f1;
+.box{
+  position: fixed;
+  width: 300px;
+  height: 500px;
+  /*background-color: #a3eed3;*/
+  padding: 30px;
+  margin-top: 50px;
+  margin-right: 50px;
+  border-radius: 25px;
+
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   box-sizing: border-box;
   text-align: center;
   justify-self: center;
 }
 
 button {
-  background-color: #2ec253;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
   cursor: pointer;
-  width: 50%;
 }
 
 button:hover {
   opacity: 0.8;
 }
 
-.login {
+/*.signup {
   width: auto;
   padding: 10px 18px;
   background-color: #04aa6d;
@@ -87,6 +137,9 @@ img.avatar {
 
 .container {
   padding: 16px;
+  position: fixed;
+  margin-top: 25px;
+  margin-left: 100px;
 }
 
 span.psw {
@@ -100,7 +153,7 @@ span.psw {
     display: block;
     float: none;
   }
-  .login {
+  .signup {
     width: 100%;
   }
   .home {
@@ -108,39 +161,3 @@ span.psw {
   }
 }
 </style>
-<script>
-// import { ref } from "vue";
-// import {
-//   getAuth,
-//   createUserWithEmailAndPassword,
-//   GoogleAuthProvider,
-//   signInWithPopup,
-// } from "firebase/auth";
-// import { useRouter } from "vue-router";
-// const email = ref("");
-// const password = ref("");
-// const router = useRouter();
-
-// const register = () => {
-//   createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-//     .then((data) => {
-//       console.log("Registado com sucesso");
-//       router.push("/");
-//     })
-
-//     .catch((error) => {
-//       console.log(error.code);
-//       alert(error.message);
-//     });
-// };
-
-// const signInWithGoogle = () => {
-//   const provider = new GoogleAuthProvider();
-//   signInWithPopup(getAuth(), provider)
-//     .then((result) => {
-//       console.log(result.user);
-//       router.push("/");
-//     })
-//     .catch((error) => {});
-// };
-</script>

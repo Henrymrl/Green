@@ -9,6 +9,7 @@
     <!-- <button @click="handleSignOut" v-if="isLoggedIn"> Sair </button> -->
   </nav>
   <router-view />
+  <footer class="container"> Green Food 2022 </footer>
 </template>
 
 <style>
@@ -33,6 +34,7 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
 <script>
 
 // import {onMounted, ref} from "vue";

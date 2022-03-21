@@ -19,5 +19,5 @@
 
       </div>
     </section><!-- End About Section -->
-    <footer> Green Food 2022 </footer>
+   
 </template>

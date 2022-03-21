@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 // import {getAuth, onAuthStateChanged} from "firebase/auth";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const router = createRouter({
   history: createWebHistory(),
