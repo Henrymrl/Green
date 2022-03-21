@@ -1,64 +1,81 @@
 <template>
-  <div class="LOGIN">
+  <div class="LogIn">
     <h2>Login Page</h2>
-    <div class="container" style="background-color: #f1f1f1">
-      <a href="index.html" class="get-started-btn" style="color: #000000"
-        >HOME
-      </a>
-    </div>
   </div>
   <div class="imgcontainer">
     <img src="~@/assets/img/logo.jpg" alt="Avatar" class="avatar" />
   </div>
   <div class="box">
     <!-- <form> -->
-      <label for="uname"><b>Email</b></label>
-      <input
-        type="email"
-        placeholder="Enter Email"
-        name="uname"
-        required
-        v-model="email"
-      />
+    <label for="uname"><b>Email</b></label>
+    <input
+      type="email"
+      placeholder="Enter Email"
+      name="uname"
+      required
+      v-model="email"
+    />
+    <p></p>
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      name="psw"
+      required
+      v-model="password"
+    />
+
+    <button type="submit" class="btn btn-outline-success" @click="submit">
+      Login
+    </button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" /> lembrar
+      usuario
+    </label>
+
+    <div class="container">
+      <p>Ainda não tem conta?</p>
+      <button type="button" class="btn btn-outline-success">Sign Up</button>
       <p></p>
-      <label for="psw"><b>Password</b></label>
-      <input
-        type="password"
-        placeholder="Enter Password"
-        name="psw"
-        required
-        v-model="password"
-      />
-
-      <button type="submit" class="btn btn-outline-success" @click="submit">
-        Login
-      </button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember" /> lembrar
-        usuario
-      </label>
-
-      <div class="container">
-        <p>Ainda não tem conta?</p>
-        <button type="button" class="btn btn-outline-success">Sign Up</button>
-        <p></p>
-        <span class="psw">Esqueceu a <a href="#">password?</a></span>
-      </div>
+      <span class="psw">Esqueceu a <a href="#">password?</a></span>
+    </div>
     <!-- </form> -->
   </div>
 </template>
 
 
 <script>
-// /* eslint-disable */
-// import { ref } from "vue";
+/* eslint-disable */
+
+
+
+// // import { ref } from "vue";
 // // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 // import firebase from "firebase";
-// import { useRouter } from "vue-router";
-// const email = ref("");
-// const password = ref("");
-// const errMsg = ref();
-// const router = useRouter();
+// // import { useRouter } from "vue-router";
+
+// methods: {
+// signupRequest() {
+// firebase
+// .auth()
+// .createUserWithEmailAndPassword(this.email,
+// this.password)
+// .then(
+// () => {
+// this.successMessage = "Register Successfully.";
+// },
+// error => {
+// let errorResponse = JSON.parse(error.message);
+// this.errorMessage = errorResponse.error.message;
+// }
+// );
+// },
+// },
+
+// // const email = ref("");
+// // const password = ref("");
+// // const errMsg = ref();
+// // const router = useRouter();
 
 // const submit = () => {
 //   firebase
@@ -87,13 +104,15 @@
 //       }
 //     });
 // };
+
+
 </script>
 
 <style scoped>
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.box{
+.box {
   position: fixed;
   width: 300px;
   height: 500px;
@@ -102,7 +121,6 @@ body {
   margin-top: 50px;
   margin-right: 50px;
   border-radius: 25px;
-
 }
 
 input[type="email"],
@@ -125,6 +143,12 @@ button:hover {
   opacity: 0.8;
 }
 
+/* .imgcontainer {
+  background-attachment: fixed;
+  background: url("assets/tree-247122.jpg");
+ 
+} */
+
 /*.signup {
   width: auto;
   padding: 10px 18px;
@@ -137,10 +161,7 @@ button:hover {
   background-color: #7a7a7a;
 }
 
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
+
 
 img.avatar {
   width: 40%;

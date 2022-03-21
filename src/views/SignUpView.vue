@@ -1,45 +1,58 @@
 <template>
-  <div class="LOGIN">
-  <h2>Login Page</h2>
-  <div class="container" style="background-color:#f1f1f1">
-    <a href="index.html" class="get-started-btn" style="color:#000000">HOME </a>
-      
-    
+  <div class="SignUp">
+    <h2>SignUp Page</h2>
   </div>
-</div>
   <div class="imgcontainer">
-    <img src="~@/assets/img/logo.jpg" alt="Avatar" class="avatar">
+    <img src="~@/assets/img/logo.jpg" alt="Avatar" class="avatar" />
   </div>
-<div class = "box">
+  <div class="box">
     <form action="/action_page.php" method="post">
-    <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Enter Email" name="email" required>
-<p></p>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button @click="register" class="btn btn-outline-success">SignUp</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> lembrar usuario
-    </label>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required />
+      <p></p>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required />
 
-  <div class="container">
-    <p>Já tem conta?</p>
-    <button type="button" class="btn btn-outline-success" >LogIn  </button>
-    <p></p>
-    <span class="psw">Esqueceu a <a href="#">password?</a></span>
+      <button @click="register" class="btn btn-outline-success">SignUp</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" /> lembrar
+        usuario
+      </label>
+
+      <div class="container">
+        <p>Já tem conta?</p>
+        <button type="button" class="btn btn-outline-success">LogIn</button>
+        <p></p>
+        <span class="psw">Esqueceu a <a href="#">password?</a></span>
+      </div>
+    </form>
   </div>
-</form>
-  
-</div>
-
 </template>
 
 
 <script>
 /* eslint-disable */
+
+// methods: {
+// signupRequest() {
+// firebase
+// .auth()
+// .createUserWithEmailAndPassword(this.email,
+// this.password)
+// .then(
+// () => {
+// this.successMessage = "Register Successfully.";
+// },
+// error => {
+// let errorResponse = JSON.parse(error.message);
+// this.errorMessage = errorResponse.error.message;
+// }
+// );
+// },
+// },
+
 // import { ref } from "vue";
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// //import { getAuth, LogInWithEmailAndPassword } from "firebase/firebase-auth";
 // import firebase from "firebase";
 // import { useRouter } from "vue-router";
 // const email = ref("");
@@ -50,7 +63,7 @@
 // const register = () => {
 //   firebase
 //     .auth()
-//     .signInWithEmailAndPassword(email.value, password.value)
+//     .createUserWithEmailAndPassword(email.value, password.value)
 //     .then((data) => {
 //       console.log("Bem vindo");
 //       router.push("/");
@@ -58,30 +71,15 @@
 
 //     .catch((error) => {
 //       console.log(error.code);
-//       switch (error.code) {
-//         case "auth/invalid-email":
-//           errMsg.value = "Email inválido";
-//           break;
-//         case "auth/user-not-found":
-//           errMsg.value = "Não existe conta som este email";
-//           break;
-//         case "auth/wrong-password":
-//           errMsg.value = "Password incorreta";
-//           break;
-//         default:
-//           errMsg.value = "Email ou Password incorreta";
-//           break;
-//       }
+//       alert(errMsg);
 //     });
 // };
-
-
 </script>
 <style scoped>
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.box{
+.box {
   position: fixed;
   width: 300px;
   height: 500px;
@@ -90,7 +88,6 @@ body {
   margin-top: 50px;
   margin-right: 50px;
   border-radius: 25px;
-
 }
 
 input[type="email"],
