@@ -1,61 +1,48 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-
-import HomeView from "../views/HomeView.vue"
-
-import AboutView from "../views/AboutView.vue"
-
-import CabazesView from "../views/CabazesView.vue"
-
-import ErroView from  "../views/ErroView.vue"
-
-import LoginView from "../views/LoginView.vue"
-
-import SignInView from "../views/SignInView.vue"
-
-const routes = [
-
-
-  {
-    path: '/',
-    name: 'HomeView',
-  components: HomeView 
-  
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: AboutView
-  },
-
-  {
-    path: '/cabazes',
-    name: 'cabazes',
-    component: CabazesView
-  },
-
-  {
-    path: '/erro',
-    name: 'erro',
-    component: ErroView
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: LoginView
-  },
-  {
-    path: '/signin',
-    name: 'signin',
-    component: SignInView
-  },
-
-
-  
-]
+import { createRouter, createWebHistory } from 'vue-router';
+// import {getAuth, onAuthStateChanged} from "firebase/auth";
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/', component: () => import("../views/HomeView.vue"),
+      meta: { requiresAuth: true, }
+    },
 
-export default router
+    { path: '/SignUp', component: () => import("../views/SignUpView.vue") },
+    { path: '/Login', component: () => import("../views/LoginView.vue") },
+    { path: '/Cabazes', component: () => import("../views/CabazesView.vue") },
+    { path: '/Erro', component: () => import("../views/ErroView.vue") },
+    { path: '/About', component: () => import("../views/AboutView.vue") },
+  ],
+});
+
+// const getCurrentUser = () => {
+//   return new Promise((resolve, reject) => {
+//     const removeListener = onAuthStateChanged(
+//       getAuth(),
+//       (user) => {
+//         removeListener();
+//         resolve(user);
+//       },
+
+//       reject
+//     );
+//   })
+// }
+
+// router.beforeEach(async(to, from, next) => {
+//   if (to.matched.some((record) => record.meta.requiresAuth)) {
+//     if (await getCurrentUser) {
+//       next();
+//     }
+//     else {
+//       alert("não tens acesso!");
+//       next("/");
+//     }
+//   }
+//   else {
+//     next();
+//   }
+// });
+export default router;

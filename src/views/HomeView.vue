@@ -1,6 +1,6 @@
 <template>
 <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
+  <section id="/" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Comida saudável<br>à distancia de um click</h1>
       <h2>Entregamos em sua casa os alimentos que mais gosta</h2>

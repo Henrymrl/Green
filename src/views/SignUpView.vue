@@ -1,28 +1,32 @@
 <template>
   <div class="SignUp">
-    <h2>LogIn Page</h2>
+    <h2>SignUp Page</h2>
   </div>
 
   <div class="logo">
-    <img src="../assets/img/logo.jpg" alt="Avatar" class="avatar" />
+    <img
+      src="../assets/img/logo.jpg"
+      alt="Avatar"
+      class="avatar"
+    />
   </div>
 
   <div class="Register">
-    <p><input type="text" placeholder="Email" v-model="email" /></p>
+    <p><input type="text" placeholder="Email" v-model="email"></p>
     <br />
-    <p><input type="password" placeholder="Password" v-model="password" /></p>
-    <p v-if="errMsg">{{ errMsg }}</p>
-    <p><button @click="register">Sign Up</button></p>
-    <p><button @click="signInWithGoogle">Sign In With Google</button></p>
+    <p><input type="password" placeholder="Password" v-model="password"></p>
+    <p><button @click="register"> Sign Up </button></p>
+    <p><button @click="signInWithGoogle"> Sign In With Google </button></p>
   </div>
 
-  <label>
-    <input type="checkbox" checked="checked" name="remember" /> lembrar usuario
-    <span class="psw">Esqueceu a <a href="#">password?</a></span>
-  </label>
-  <div class="container" style="background-color: #f1f1f1"></div>
-
-  <footer>Green Food 2022</footer>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" /> lembrar
+      usuario
+      <span class="psw">Esqueceu a <a href="#">password?</a></span>
+    </label>
+  <div class="container" style="background-color:#f1f1f1">   
+  </div>
+<footer> Green Food 2022 </footer>
 </template>
 
 <style>
@@ -106,36 +110,27 @@ span.psw {
 </style>
 <script>
 // import { ref } from "vue";
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   GoogleAuthProvider,
+//   signInWithPopup,
+// } from "firebase/auth";
 // import { useRouter } from "vue-router";
 // const email = ref("");
 // const password = ref("");
-// const errMsg = ref();
 // const router = useRouter();
 
 // const register = () => {
-//   signInWithEmailAndPassword(getAuth(), email.value, password.value)
+//   createUserWithEmailAndPassword(getAuth(), email.value, password.value)
 //     .then((data) => {
-//       console.log("Bem vindo");
+//       console.log("Registado com sucesso");
 //       router.push("/");
 //     })
 
 //     .catch((error) => {
 //       console.log(error.code);
-//       switch (error.code) {
-//         case "auth/invalid-email":
-//           errMsg.value = "Email inválido";
-//           break;
-//         case "auth/user-not-found":
-//           errMsg.value = "Não existe conta som este email";
-//           break;
-//         case "auth/wrong-password":
-//           errMsg.value = "Password incorreta";
-//           break;
-//         default:
-//           errMsg.value = "Email ou Password incorreta";
-//           break;
-//       }
+//       alert(error.message);
 //     });
 // };
 

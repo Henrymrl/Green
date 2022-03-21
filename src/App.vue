@@ -1,11 +1,12 @@
 <template>
   <nav>
     <router-link to="/"> Home </router-link>
-    <router-link to="/login"> LogIn </router-link>
-    <router-link to="/signin"> SignIn </router-link>
-    <router-link to="/cabazes"> Cabazes </router-link>
-    <router-link to="/about"> About </router-link>
-    <router-link to="/erro"> Erro </router-link>
+    <router-link to="/Login"> LogIn </router-link>
+    <router-link to="/SignUp"> SignUp </router-link>
+    <router-link to="/Cabazes"> Cabazes </router-link>
+    <router-link to="/About"> About </router-link>
+    <router-link to="/Erro"> Erro </router-link>
+    <!-- <button @click="handleSignOut" v-if="isLoggedIn"> Sair </button> -->
   </nav>
   <router-view />
 </template>
@@ -32,3 +33,38 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>
+
+// import {onMounted, ref} from "vue";
+// import {getAuth, onAuthStageChanged, } from "firebase/auth";
+// import {useRouter} from "vue-router";
+
+// const router = useRouter();
+
+
+// const isLoggedIn = ref(false);
+
+
+// let auth;
+// onMounted(() => {
+//   auth = getAuth();
+//   onAuthStageChanged(auth, (user) =>{
+//      if (user) {
+//        isLoggedIn.value = true;
+//      }
+//      else {
+//        isLoggedIn.value = false;
+//      }
+//   });
+// });
+
+// const handleSignOut = () => {
+//   signOut(auth).then(() => {
+//     router.push("/");
+
+//   })
+
+// };
+
+
+</script>
